@@ -5,7 +5,7 @@ import axios from 'axios';
 import { useAuthStore } from '../store/authStore'; 
 
 const axiosClient = axios.create({
-  baseURL: 'http://localhost:5000/api', 
+  baseURL: 'https://repodoc.up.railway.app/api', 
 });
 
 axiosClient.interceptors.request.use(

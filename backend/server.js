@@ -23,6 +23,7 @@ app.use(express.json());
 // ... (rest of your file) ...
 
 app.get('/api/test', (req, res) => {
+  console.log("Test log is here");
   res.json({ message: 'Welcome to the RepoDoc.ai API' });
 });
 

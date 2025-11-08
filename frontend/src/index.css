@@ -1,0 +1,150 @@
+/* frontend/src/index.css */
+
+/* 1. Define color variables */
+:root {
+  /* Light Mode (default) */
+  --bg-color: #ffffff;
+  --text-color: #213547;
+  --card-bg: #f9f9f9;
+  --border-color: #ddd;
+  --button-bg: #007bff;
+  --button-hover-bg: #0056b3;
+  --header-border: #eaeaea;
+}
+
+[data-theme="dark"] {
+  /* Dark Mode */
+  --bg-color: #1a1a1a;
+  --text-color: #f0f0f0;
+  --card-bg: #2a2a2a;
+  --border-color: #444;
+  --button-bg: #007bff; /* Keep button color or change it */
+  --button-hover-bg: #0056b3;
+  --header-border: #333;
+}
+
+/* --- 2. Apply variables to Base --- */
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  /* Apply theme colors */
+  color: var(--text-color);
+  background-color: var(--bg-color);
+
+  /* Smooth color transitions */
+  transition: background-color 0.2s, color 0.2s;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+main {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+h1, h2, h3 {
+  margin-top: 0;
+}
+
+/* --- 3. Apply variables to Components --- */
+
+/* --- Forms --- */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 500px;
+}
+
+input[type="email"],
+input[type="password"],
+input[type="text"] {
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  box-sizing: border-box; 
+
+  /* Apply theme */
+  background-color: var(--card-bg);
+  color: var(--text-color);
+}
+
+/* --- Buttons --- */
+button {
+  background-color: var(--button-bg);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+button:hover {
+  background-color: var(--button-hover-bg);
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* --- Dashboard Form (specific) --- */
+form.generation-form {
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* --- Markdown Article Preview --- */
+article.markdown-preview {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans",
+    Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+  padding: 1.5rem;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  background-color: var(--card-bg);
+  margin-top: 2rem;
+}
+
+article.markdown-preview h1,
+article.markdown-preview h2,
+article.markdown-preview h3 {
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 0.3em;
+}
+
+article.markdown-preview pre {
+  background-color: var(--bg-color); /* Use main bg for code blocks */
+  padding: 1rem;
+  border-radius: 8px;
+  overflow-x: auto;
+}
+
+article.markdown-preview code {
+  font-family: "Courier New", Courier, monospace;
+}
+
+article.markdown-preview blockquote {
+  border-left: 4px solid var(--border-color);
+  padding-left: 1rem;
+  color: #888;
+  margin-left: 0;
+}
+
+article.markdown-preview ul,
+article.markdown-preview ol {
+  padding-left: 2rem;
+}

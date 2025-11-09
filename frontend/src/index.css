@@ -12,6 +12,17 @@
   --header-border: #eaeaea;
 }
 
+[data-theme="light"] {
+  /* Aperture Light Mode - Soft Pearl Multi */
+  --bg-primary: #F8F9FC;
+  --bg-glass: rgba(255, 255, 255, 0.85);
+  --accent-primary: #00B8A3;
+  --accent-secondary: #7B1FA2;
+  --text-primary: #1A1A2E;
+  --text-secondary: #5A5A6F;
+  --border-glass: rgba(0, 0, 0, 0.08);
+}
+
 [data-theme="dark"] {
   /* Dark Mode */
   --bg-color: #1a1a1a;
@@ -41,6 +52,8 @@ body {
   margin: 0;
   min-width: 320px;
   min-height: 100vh;
+    /* background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); */
+
 }
 
 main {
